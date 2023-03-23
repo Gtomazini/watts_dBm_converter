@@ -1,8 +1,18 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
+
+void clear_t(){
+#ifdef WINDOWS
+	std::system("cls");
+#else
+	std::system("clear");
+#endif
+}
 
 int main() {
 inicio:
+	clear_t();
     double value_watts;
     std::cout << "Insira a potencia em watts: ";
     std::cin >> value_watts;
